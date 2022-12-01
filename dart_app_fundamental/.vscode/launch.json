@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "name": "dart_app_fundamental",
+            "request": "launch",
+            "type": "dart",
+            "console": "terminal"
+        }
+    ]
+
+}
