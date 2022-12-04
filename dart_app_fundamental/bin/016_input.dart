@@ -1,7 +1,9 @@
+// ignore_for_file: file_names
+
 import 'dart:io';
 
 void main() {
   print('Enter your age:');
-  var age = stdin.readLineSync();
+  var age = num.tryParse(stdin.readLineSync()!);
   print('Your age is $age years old.');
 }
