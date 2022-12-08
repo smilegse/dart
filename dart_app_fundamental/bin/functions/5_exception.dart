@@ -21,13 +21,16 @@ void ageCalclator() {
   while (true) {
     try {
       print('Enter your birth year:');
-      var birth_year = int.parse(stdin.readLineSync()!);
-      var age = DateTime.now().year - birth_year;
+      var birthYear = int.parse(stdin.readLineSync()!);
+      if (birthYear.isNegative) {
+        throw FormatException();
+      }
+      var age = DateTime.now().year - birthYear;
       print(age);
 
       if (age < 0) throw FormatException();
       if (age < 6) throw Exception;
-      print('Your age is $age Years old.');
+      print('Your age is $age years old.');
       break;
     } on FormatException {
       print('Invalid data... try again');
