@@ -27,6 +27,12 @@ void main() {
     3: 'Earth',
     4: 'Mars'
   };
+
+  if (planets.isEmpty)
+    print('planets map is empty');
+  else
+    print('planets  map is not empty');
+
   final gasGiants = <int, String>{5: 'Jupiter', 6: 'Saturn'};
   final iceGiants = <int, String>{7: 'Uranus', 8: 'Neptune'};
   planets.addEntries(gasGiants.entries);
